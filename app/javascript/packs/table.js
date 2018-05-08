@@ -12,6 +12,20 @@ export default class Table extends React.Component {
         name: 'Jason Maurer',
         age: 23,
       }
+    }, {
+      name: 'test',
+      age: 22,
+      friend: {
+        name: 'sample',
+        age: 20,
+      },
+    }, {
+      name: 'Hoge',
+      age: 24,
+      friend: {
+        name: 'Bar',
+        age: 30,
+      }
     }];
 
     const columns = [{
@@ -28,7 +42,8 @@ export default class Table extends React.Component {
       }, {
         Header: props => <span>Friend Age</span>, // Custom header components!
         accessor: 'friend.age'
-      }];
+      },
+    ];
 
     return <ReactTable data={data} columns={columns}/>
   }
