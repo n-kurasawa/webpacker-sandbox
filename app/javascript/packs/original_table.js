@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom'
 import TableContainer from '../containers/table-container';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const data = JSON.parse(document.getElementById('table_data').dataset.json);
+
   ReactDOM.render(
-    <TableContainer headers={['name', 'age', 'other']} rows={[['倉澤', '29', 'hoge'], ['テスト', '2', 'test'], ['kkk', '100', 'abc']]} defaultSort={1}/>,
+    <TableContainer headers={data.headers} rows={data.rows} defaultSort={data.default_sort}/>,
     document.body.appendChild(document.createElement('div')),
   )
 });
