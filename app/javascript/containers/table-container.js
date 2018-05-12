@@ -11,20 +11,20 @@ export default class TableContainer extends React.Component {
       rows: this._sort(props.rows, key, orderBy),
       order: {
         key: key,
-        orderBy: orderBy
+        by: orderBy
       }
     };
   }
 
   sort(key) {
-    let orderBy = this._switchOrder(key);
+    const orderBy = this._switchOrder(key);
 
     const rows = this._sort(this.state.rows, key, orderBy);
     this.setState({
       rows: rows,
       order: {
         key: key,
-        orderBy: orderBy
+        by: orderBy
       }
     });
   }
@@ -32,7 +32,7 @@ export default class TableContainer extends React.Component {
   _switchOrder(key) {
     let orderBy = 'asc';
     if (this.state.order.key === key) {
-      if (this.state.order.orderBy === 'asc') {
+      if (this.state.order.by === 'asc') {
         orderBy = 'desc';
       } else {
         orderBy = 'asc';
@@ -71,7 +71,7 @@ export default class TableContainer extends React.Component {
 
   render() {
     return (
-      <Table headers={this.props.headers} rows={this.state.rows} sort={this.sort.bind(this)} />
+      <Table headers={this.props.headers} rows={this.state.rows} sort={this.sort.bind(this)} order={this.state.order} />
     );
   }
 }
