@@ -12,9 +12,9 @@ const Header = ({headers, sort, order}) =>
       {
         headers.map((header, i) => {
           if (header === order.key) {
-            return <th className={order.by} key={i} onClick={() => sort(header)}>{header}</th>
+            return <th className={`${order.by} pointer`} key={i} onClick={() => sort(header)}>{header}</th>
           }
-          return <th key={i} onClick={() => sort(header)}>{header}</th>
+          return <th className="pointer" key={i} onClick={() => sort(header)}>{header}</th>
         })
       }
     </tr>

@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.asc {
+  border-top: #000 5px solid
+}
+
+.desc {
+  border-bottom: #000 5px solid
+}
+
+.pointer {
+  cursor: pointer;
+}
