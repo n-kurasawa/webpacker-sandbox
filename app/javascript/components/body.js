@@ -5,14 +5,14 @@ export default ({rows}) =>
     {
       rows.map((row, i) =>
         <tr key={i}>
-          { row.map((col, j) => <Column index={j} text={col} />) }
+          { row.map((col, j) => <Column key={j} index={j} text={col} />) }
         </tr>
       )
     }
   </tbody>;
 
 const Column = ({index, text}) =>
-  <td key={index}>
+  <td>
     {textOption(index, text)}
   </td>;
 
