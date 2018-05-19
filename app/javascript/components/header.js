@@ -1,8 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default ({headers, sort, order}) =>
-  <thead>
-    <tr>
+  <Thead>
+    <Th>
       {
         headers.map((header, i) => {
           if (header === order.key) {
@@ -11,5 +12,20 @@ export default ({headers, sort, order}) =>
           return <th className="pointer" key={i} onClick={() => sort(header)}>{header}</th>
         })
       }
-    </tr>
-  </thead>;
+    </Th>
+  </Thead>;
+
+const Thead = styled.thead`
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+`;
+
+const Th = styled.th`
+`;

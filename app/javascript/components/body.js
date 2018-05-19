@@ -1,7 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default ({rows}) =>
-  <tbody>
+  <Tbody>
     {
       rows.map((row, i) =>
         <tr key={i}>
@@ -9,12 +10,12 @@ export default ({rows}) =>
         </tr>
       )
     }
-  </tbody>;
+  </Tbody>;
 
 const Column = ({index, text}) =>
-  <td>
+  <Td>
     {textOption(index, text)}
-  </td>;
+  </Td>;
 
 const textOption = (index, text) => {
   if (index === 1) {
@@ -22,3 +23,14 @@ const textOption = (index, text) => {
   }
   return text;
 };
+
+const Tbody = styled.tbody`
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+`;
+
+const Td = styled.td`
+ 
+`;
