@@ -20,7 +20,6 @@ const Thead = styled.thead`
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  
   position: -webkit-sticky;
   position: sticky;
   top: 0;

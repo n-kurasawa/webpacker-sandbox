@@ -32,5 +32,4 @@ const Tbody = styled.tbody`
 `;
 
 const Td = styled.td`
- 
 `;
