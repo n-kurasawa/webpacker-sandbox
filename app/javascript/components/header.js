@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default ({headers, sort, order}) =>
   <Thead>
-    <Th>
+    <tr>
       {
         headers.map((header, i) => {
           if (header === order.key) {
@@ -12,7 +12,7 @@ export default ({headers, sort, order}) =>
           return <th className="pointer" key={i} onClick={() => sort(header)}>{header}</th>
         })
       }
-    </Th>
+    </tr>
   </Thead>;
 
 const Thead = styled.thead`
@@ -24,7 +24,4 @@ const Thead = styled.thead`
   position: sticky;
   top: 0;
   z-index: 2;
-`;
-
-const Th = styled.th`
 `;
