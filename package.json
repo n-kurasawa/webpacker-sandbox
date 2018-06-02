@@ -2,7 +2,7 @@
   "name": "webpacker-sandbox",
   "private": true,
   "scripts": {
-    "start:dev": "./bin/webpack-dev-server"
+    "start": "./bin/webpack-dev-server"
   },
   "dependencies": {
     "@rails/webpacker": "^3.4.3",
