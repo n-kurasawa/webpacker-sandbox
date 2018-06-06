@@ -5,7 +5,7 @@ class OriginalTablesController < ApplicationController
       rows: [
           [1, '倉澤', 29, 'ほげ'],
           [2, 'テスト', 30, 'test'],
-          [1, 'たろう', 22, 'taro'],
+          [3, 'たろう', 22, 'taro'],
       ],
       default_sort: 1
     }
